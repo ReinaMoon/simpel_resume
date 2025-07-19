@@ -20,18 +20,14 @@
 <br>
 
 <div align="center">
-  <a href="https://github.com/ReinaMoon/simpel_resume/blob/main/juyoung_resume.html" target="_blank">
-    <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
-  </a>
+<a href="https://reinamoon.github.io/simpel_resume/juyoung_resume.html" target="_blank">
+  <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
+</a>
 </div>
 
 <br>
 
 <div align="center">
-  
-  **👇 Preview GIF 👇**
-  
-  *(이곳에 미리보기 GIF를 추가하세요!)*
   
   ![Resume Preview GIF](https://github.com/ReinaMoon/simpel_resume/blob/main/preview/preview.png?text=Resume+Preview+GIF)
   
@@ -75,9 +71,9 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 </div>
 
 <div align="center">
-  <a href="https://reinamoon.github.io/simpel_resume/" target="_blank">
-    <img src="https://img.shields.io/badge/라이브_이력서_보기-클릭하세요-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
-  </a>
+<a href="https://reinamoon.github.io/simpel_resume/juyoung_resume.html" target="_blank">
+  <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
+</a>
 </div>
 
 ## ✨ 이 프로젝트에 대하여
