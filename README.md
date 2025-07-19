@@ -20,7 +20,7 @@
 <br>
 
 <div align="center">
-<a href="https://reinamoon.github.io/simpel_resume/juyoung_resume.html" target="_blank">
+<a href="https://reinamoon.github.io/simpel_resume/index.html" target="_blank">
   <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
 </a>
 </div>
@@ -71,7 +71,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 </div>
 
 <div align="center">
-<a href="https://reinamoon.github.io/simpel_resume/juyoung_resume.html" target="_blank">
+<a href="https://reinamoon.github.io/simpel_resume/index.html" target="_blank">
   <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
 </a>
 </div>
