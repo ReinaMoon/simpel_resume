@@ -20,7 +20,7 @@
 <br>
 
 <div align="center">
-  <a href="https://reinamoon.github.io/simpel_resume/" target="_blank">
+  <a href="https://github.com/ReinaMoon/simpel_resume/blob/main/juyoung_resume.html" target="_blank">
     <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
   </a>
 </div>
