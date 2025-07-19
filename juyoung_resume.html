@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juyoung Moon - Senior Engineering Manager</title>
+    <style>
+        @media print {
+            body { margin: 0; font-size: 11pt; }
+            .no-print { display: none!important; }
+            .header { background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important; }
+        }
+        
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #1f2937;
+            max-width: 8.5in;
+            margin: 0 auto;
+            padding: 0;
+            background: #f8fafc;
+        }
+        
+        /* Professional header with gradient */
+        .header {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 0;
+        }
+        
+        .name {
+            font-size: 24pt;
+            font-weight: bold;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .title {
+            font-size: 14pt;
+            margin: 8px 0 20px 0;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            font-size: 10pt;
+        }
+        .contact-info a {
+        color: white; /* 링크 글자색을 흰색으로 변경 */
+        text-decoration: none; /* 링크 밑줄 제거 */
+        }
+
+    .contact-info a:hover {
+        text-decoration: underline; /* 마우스를 올렸을 때만 밑줄 표시 (선택사항이지만 추천) */
+    }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        /* Main content area */
+        .content {
+            background: white;
+            padding: 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Section styling */
+        .section {
+            margin-bottom: 25px;
+            break-inside: avoid;
+        }
+        
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #1e3a8a;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #3b82f6;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+        }
+        
+        /* Skills table */
+        .skills-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        .skills-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        
+        .skills-table td {
+            padding: 10px 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        
+        .skills-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        .skill-category {
+            font-weight: bold;
+            color: #1e3a8a;
+            width: 180px;
+        }
+        
+        /* Experience table format */
+        .experience-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            border: 1px solid #d1d5db;
+        }
+        
+        .experience-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .experience-table td {
+            padding: 12px;
+            border-bottom: 1px solid #e5e7eb;
+            vertical-align: top;
+        }
+        
+        .job-title-cell {
+            font-weight: bold;
+            color: #1e3a8a;
+            width: 200px;
+        }
+        
+        .company-cell {
+            font-weight: bold;
+            width: 180px;
+        }
+        
+        .duration-cell {
+            color: #6b7280;
+            width: 150px;
+        }
+        
+        /* Achievement styling */
+        .achievements {
+            margin-top: 8px;
+        }
+        
+        .achievement {
+            margin-bottom: 6px;
+            padding-left: 0;
+            color: #374151;
+            text-align: justify;
+        }
+        
+        .achievement::before {
+            content: "▪";
+            color: #3b82f6;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        /* Education and Certification tables */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        .info-table th {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 10px;
+            text-align: left;
+            font-weight: bold;
+            font-size: 11pt;
+        }
+        
+        .info-table td {
+            padding: 10px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+        
+        .info-table tr:nth-child(even) {
+            background-color: #f8fafc;
+        }
+        
+        /* Download button */
+        .download-btn {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 11pt;
+            margin: 20px auto;
+            display: block;
+            font-weight: bold;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+        
+        /* Professional summary box */
+        .summary-box {
+            background: linear-gradient(135deg, #eff6ff, #dbeafe);
+            border-left: 4px solid #3b82f6;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .contact-info { gap: 10px; }
+            .content { padding: 10px; }
+            .skills-table, .experience-table, .info-table { font-size: 10pt; }
+        }
+    </style>
+</head>
+<body>
+    <button class="download-btn no-print" onclick="downloadPDF()">📄 Download as PDF</button>
+    <div class="header">
+        <div class="name">JUYOUNG MOON</div>
+        <div class="title">Senior Engineering Manager</div>
+        <div class="contact-info">
+            <div class="contact-item">
+                <span>📧</span>
+                <span>moonjuyoung@gmail.com</span>
+            </div>
+            <div class="contact-item">
+                <span>🔗</span>
+                <a href="https://www.linkedin.com/in/reinamoon" target="_blank" rel="noopener noreferrer">linkedin.com/in/reinamoon</a>
+            </div>
+            <div class="contact-item">
+                <span>📱</span>
+                <span>+(49) 176 4560 2223</span>
+            </div>
+            <div class="contact-item">
+                <span>📍</span>
+                <span>Berlin, Germany (10117)</span>
+            </div>
+            <div class="contact-item">
+            <span>🌐</span>
+                <a href="https://juyoungmoon.github.io/resume" target="_blank" rel="noopener noreferrer">Interactive Online Resume</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content">
+        <div class="section">
+            <div class="section-title">PROFESSIONAL SUMMARY</div>
+            <div class="summary-box">
+                Senior Engineering Manager with 18+ years of experience in cloud infrastructure, test automation, and quality engineering. Proven track record leading cross-functional teams, implementing CI/CD processes, and building scalable automation frameworks. Expert in Python, Kubernetes, AWS, and compliance frameworks including ISO 27001 and GDPR. Successfully managed teams of 15+ engineers and delivered enterprise-level cloud solutions at IONOS, Intel, Samsung, and SanDisk.
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">CORE COMPETENCIES</div>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Category</th>
+                        <th>Technologies & Skills</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="skill-category">Programming Languages</td>
+                        <td>Python, Go, Java, Kotlin, C/C++, C#, JavaScript, Shell Scripting, etc</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Cloud Platforms & DevOps</td>
+                        <td>AWS, Azure, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitLab CI, GitHub Actions</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Data Stores & Pipelines</td>
+                        <td>PostgreSQL, MySQL, Redis, MongoDB, DynamoDB, Elasticsearch, Apache Kafka</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Monitoring & Observability</td>
+                        <td>Prometheus, Grafana, ELK Stack (Elasticsearch), Loki, OpenTelemetry</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Test Automation</td>
+                        <td>PyTest, Selenium, Cypress, TestCafe, JMeter, Cucumber, Playwright, QANG Framework</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Compliance & Security</td>
+                        <td>ISO 27001, GDPR, Security Testing, Risk Assessment, Test Data Governance</td>
+                    </tr>
+                    <tr>
+                        <td class="skill-category">Leadership & Methodologies</td>
+                        <td>Agile, Scrum Master, Team Management, Mentoring, Cross-functional Collaboration</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">PROFESSIONAL EXPERIENCE</div>
+            
+            <table class="experience-table">
+                <thead>
+                    <tr>
+                        <th>Position</th>
+                        <th>Company</th>
+                        <th>Duration</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="job-title-cell">Senior Engineering Manager</td>
+                        <td class="company-cell">IONOS SE</td>
+                        <td class="duration-cell">Jun 2022 - Present</td>
+                        <td>Berlin, Germany</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="achievements">
+                <div class="achievement">Lead three engineering teams (Global QA, QANG Python Framework, Test Infrastructure) supporting IaaS, PaaS, and DBaaS cloud platform delivery, including VMs, Kubernetes, S3, Load Balancers and several other products</div>
+                <div class="achievement">Designed and implemented QANG internal Python test automation framework adopted by several teams, reducing test development time by 60% and standardizing testing practices company-wide</div>
+                <div class="achievement">Integrated Apache Kafka into test data pipelines enabling real-time system monitoring and reducing incident detection time by 40%</div>
+                <div class="achievement">Established QA metrics dashboard using Grafana and Python scripts providing data-driven insights for 15+ stakeholders</div>
+                <div class="achievement">Implemented performance testing framework detecting bottlenecks and improving system response times by 25%</div>
+                <div class="achievement">Collaborated with cybersecurity teams to ensure ISO 27001 compliance for cloud infrastructure testing processes</div>
+                <div class="achievement">Built high-performing engineering team through strategic hiring, onboarding, and mentorship programs</div>
+            </div>
+            
+            <table class="experience-table">
+                <tbody>
+                    <tr>
+                        <td class="job-title-cell">QA Engineer</td>
+                        <td class="company-cell">IONOS SE</td>
+                        <td class="duration-cell">Aug 2018 - May 2022</td>
+                        <td>Berlin, Germany</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="achievements">
+                <div class="achievement">Led comprehensive testing strategy for cloud infrastructure products including VM, S3, Kubernetes, Load Balancer, and Database services</div>
+                <div class="achievement">Developed modular Python and PyTest test framework increasing test reusability by 70% and reducing CI/CD execution time by 45%</div>
+                <div class="achievement">Managed complex test environments and on-premises hardware provisioning for staging environments supporting 500+ daily test executions</div>
+                <div class="achievement">Designed automated test suites using JMeter, TestCafe, Jenkins, and PostgreSQL achieving 85% test coverage</div>
+                <div class="achievement">Mentored 5+ junior QA engineers through code reviews and best practices training</div>
+            </div>
+            
+            <table class="experience-table">
+                <tbody>
+                    <tr>
+                        <td class="job-title-cell">Customer Quality Engineer</td>
+                        <td class="company-cell">Intel Corporation</td>
+                        <td class="duration-cell">May 2017 - May 2018</td>
+                        <td>Seoul, South Korea</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="achievements">
+                <div class="achievement">Served as primary quality contact for major APAC clients managing quality cases for WLAN and CPU product lines including Sky Lake, Coffee Lake, and Cannon Lake architectures</div>
+                <div class="achievement">Delivered technical support to enterprise customers ensuring 99% issue resolution within SLA timeframes</div>
+                <div class="achievement">Developed diagnostic automation tools using Python, C#, Django, and JavaScript reducing investigation time by 50%</div>
+                <div class="achievement">Managed project budgets up to $50,000 monthly with technical feasibility assessments and ROI recommendations</div>
+            </div>
+            
+            <table class="experience-table">
+                <tbody>
+                    <tr>
+                        <td class="job-title-cell">Senior Software Engineer</td>
+                        <td class="company-cell">SanDisk Corporation</td>
+                        <td class="duration-cell">Aug 2015 - Sep 2016</td>
+                        <td>Seoul, South Korea</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="achievements">
+                <div class="achievement">Led firmware development team for SATA-based SSD Host Layer translating complex OEM requirements into high-performance embedded solutions</div>
+                <div class="achievement">Designed data transmission layer between host and Flash Translation Layer on ThreadX RTOS improving throughput by 10%</div>
+                <div class="achievement">Implemented automated testing strategies using Python and Jenkins ensuring firmware quality and release readiness</div>
+            </div>
+            
+            <table class="experience-table">
+                <tbody>
+                    <tr>
+                        <td class="job-title-cell">Software Engineer - Team Lead</td>
+                        <td class="company-cell">Samsung Electronics</td>
+                        <td class="duration-cell">Jan 2010 - Jul 2015</td>
+                        <td>Hwaseong, South Korea</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="achievements">
+                <div class="achievement">Led 15-member engineering team developing automation tools for SSD, UFS, and eMMC testing reducing manual validation cycles by 90%</div>
+                <div class="achievement">Architected enterprise-wide test framework supporting OS installation, monitoring, and automated logging for 1500+ test machines</div>
+                <div class="achievement">Designed scenario-based validation tests for 3D NAND flash memory assessing reliability under thermal stress and endurance conditions</div>
+                <div class="achievement">Developed hardware unit test framework using C, FPGA, oscilloscopes, and logic analyzers for early controller validation</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">EDUCATION</div>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Degree</th>
+                        <th>Institution</th>
+                        <th>Duration</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bachelor of Engineering in Computer Engineering</td>
+                        <td>Tongmyong University</td>
+                        <td>Mar 2005 - Feb 2010</td>
+                        <td>Busan, South Korea</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">CERTIFICATIONS</div>
+            <table class="info-table">
+                <thead>
+                    <tr>
+                        <th>Certification</th>
+                        <th>Issuing Organization</th>
+                        <th>Year</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Coaching Skills for Managers Specialization</td>
+                        <td>University of California, Davis</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr>
+                        <td>Engineering Project Management Specialization</td>
+                        <td>Rice University</td>
+                        <td>2025</td>
+                    </tr>
+                    <tr>
+                        <td>Six Sigma Black Belt</td>
+                        <td>Korea License Approval Development Institute</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>ISTQB Certified Tester Foundation Level (CTFL)</td>
+                        <td>ISTQB</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>Google Cybersecurity Professional Certificate</td>
+                        <td>Google</td>
+                        <td>2024</td>
+                    </tr>
+                    <tr>
+                        <td>AWS Cloud Technology Consultant</td>
+                        <td>Amazon Web Services</td>
+                        <td>2024</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <div class="section-title">ADDITIONAL EXPERIENCE</div>
+            <div class="achievement">Startup Co-Founder: Successfully launched and operated two early-stage technology startups gaining experience in product development, team formation, and go-to-market strategy</div>
+            <div class="achievement">Software Engineering Intern: Completed internships in Manila, Philippines developing internal tools and automation projects using ASP.NET</div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadPDF() {
+            window.print();
+        }
+    </script>
+</body>
+</html>
