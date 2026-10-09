@@ -1,6 +1,6 @@
 {
   "name": "juyoung-moon-resume",
   "private": true,
-  "scripts": { "build:pdf": "node scripts/build-pdf.mjs" },
+  "scripts": { "build:pdf": "node scripts/scripts/build-pdf.mjs" },
   "devDependencies": { "puppeteer-core": "^24.0.0" }
 }
