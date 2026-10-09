@@ -1,7 +1,7 @@
 import puppeteer from 'puppeteer-core';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
-const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../..');
 const browser = await puppeteer.launch({
   executablePath: process.env.CHROME_BIN || '/usr/bin/google-chrome-stable',
   headless: true,
