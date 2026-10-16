@@ -7,58 +7,85 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&amp;display=swap" rel="stylesheet"/>
 <title>Juyoung Moon - Senior Engineering Manager</title>
 <style>
+/* ===== Two-column sidebar design ===== */
 @media print {
-body { margin: 0; font-size: 11pt; }
 .no-print { display: none!important; }
-.header {
- background-color: #1e3a8a !important;
- background-image: linear-gradient(135deg, #1e3a8a, #3b82f6) !important;
+.header, .sidebar {
  -webkit-print-color-adjust: exact;
  print-color-adjust: exact;
 }
-.header, .header * { color: #fff !important; }
-.header .title { opacity: 1; }
 }
+* { box-sizing: border-box; }
 body {
 font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
-font-size: 11pt;
-line-height: 1.4;
+font-size: 10.5pt;
+line-height: 1.45;
 color: #1f2937;
-max-width: 8.5in;
+max-width: 1120px;
 margin: 0 auto;
 padding: 0;
-background: #f8fafc;
+background: #e8ebee;
 }
 .header {
-background-color: #1e3a8a;
-background-image: linear-gradient(135deg, #1e3a8a, #3b82f6);
-color: white;
-padding: 30px;
-text-align: center;
-margin-bottom: 0;
+background-color: #111827;
+background-image: linear-gradient(120deg, #111827, #134e4a);
+color: #ffffff;
+padding: 30px 36px;
+text-align: left;
 }
 .name {
 font-size: 24pt;
-font-weight: 900;
 font-weight: bold;
 margin: 0;
-letter-spacing: 2px;
+letter-spacing: 1px;
 }
 .title {
-font-size: 14pt;
-margin: 8px 0 20px 0;
-opacity: 0.9;
+font-size: 13pt;
+margin: 6px 0 0 0;
 font-weight: 300;
+color: #99f6e4;
+}
+.layout {
+display: grid;
+grid-template-columns: 320px 1fr;
+gap: 0;
+background: #ffffff;
+}
+.sidebar {
+background: #f0f4f4;
+padding: 26px 24px 34px;
+border-right: 1px solid #d9e2e2;
+}
+.main-col {
+padding: 26px 32px 34px;
+}
+.section {
+margin-bottom: 24px;
+break-inside: avoid;
+}
+.section-title {
+font-size: 11.5pt;
+font-weight: bold;
+color: #134e4a;
+text-transform: uppercase;
+letter-spacing: 1.5px;
+border-bottom: 2px solid #0f766e;
+margin-bottom: 12px;
+padding-bottom: 4px;
+}
+.sidebar .section-title {
+font-size: 10pt;
+letter-spacing: 1.2px;
 }
 .contact-info {
 display: flex;
-justify-content: center;
-gap: 10px;
-flex-wrap: wrap;
-font-size: 10pt;
+flex-direction: column;
+gap: 8px;
+font-size: 9.5pt;
+color: #1f2937;
 }
 .contact-info a {
-color: white;
+color: #0f766e;
 text-decoration: none;
 }
 .contact-info a:hover {
@@ -68,215 +95,190 @@ text-decoration: underline;
 display: flex;
 align-items: center;
 gap: 5px;
+overflow-wrap: anywhere;
 }
-.content {
-background: white;
-padding: 30px;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.section {
-margin-bottom: 25px;
-break-inside: avoid;
-}
-.section-title {
-font-size: 14pt;
-font-weight: bold;
-color: #1e3a8a;
-text-transform: uppercase;
-letter-spacing: 1px;
-border-bottom: 2px solid #3b82f6;
-margin-bottom: 15px;
-padding-bottom: 5px;
-}
-.skills-table {
-width: 100%;
-border-collapse: collapse;
-margin-bottom: 15px;
-}
-.skills-table th {
-background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-color: white;
-padding: 12px;
-text-align: left;
-font-weight: bold;
-font-size: 11pt;
-}
-.skills-table td {
-padding: 10px 12px;
-border-bottom: 1px solid #e5e7eb;
-vertical-align: top;
-}
-.skills-table tr:nth-child(even) {
-background-color: #f8fafc;
-}
-.skill-category {
-font-weight: bold;
-color: #1e3a8a;
-width: 180px;
+.summary-box {
+background: #f0fdfa;
+border-left: 4px solid #0f766e;
+padding: 16px 18px;
+border-radius: 4px;
+margin-bottom: 4px;
 }
 .experience-table {
 width: 100%;
 border-collapse: collapse;
-margin-bottom: 20px;
-border: 1px solid #d1d5db;
+margin-bottom: 8px;
+border: none;
 }
-.experience-table th {
-background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-color: white;
-padding: 10px;
-text-align: left;
-font-weight: bold;
+.experience-table tr {
+display: flex;
+flex-wrap: wrap;
+align-items: baseline;
+padding: 6px 0 4px;
+border-bottom: 1px solid #e5e7eb;
 }
 .experience-table td {
-padding: 8px;
-border-bottom: 1px solid #e5e7eb;
-vertical-align: middle;
+padding: 1px 0;
+border-bottom: none;
+vertical-align: baseline;
 }
 .job-title-cell {
 font-weight: bold;
-color: #1e3a8a;
-width: 220px;
+color: #134e4a;
+order: 1;
+flex: 1 1 55%;
+font-size: 11pt;
 }
 .company-cell {
 font-weight: bold;
-width: 180px;
+color: #374151;
+order: 3;
+flex: 0 0 100%;
+margin-top: 1px;
+}
+.company-cell::after {
+content: "·  ";
+color: #9ca3af;
 }
 .duration-cell {
-color: #4e5666;
-width: 160px;
-font-size: 10pt;
+color: #6b7280;
+order: 2;
+flex: 0 0 auto;
+font-size: 9pt;
+margin-left: auto;
 }
 .location-cell {
-color: #4e5666;
-width:160px;
-font-size: 10pt;
+color: #6b7280;
+order: 4;
+flex: 0 0 auto;
+font-size: 9pt;
+margin-top: -1.4em;
+margin-left: auto;
 }
 .achievements {
-margin-top: 8px;
+margin-top: 6px;
 }
 .achievement {
 margin-bottom: 6px;
-padding-left: 0;
+padding-left: 14px;
 color: #374151;
-text-align: justify;
+text-align: left;
+position: relative;
 }
 .achievement::before {
 content: "▪";
-color: #3b82f6;
+color: #0f766e;
 font-weight: bold;
-margin-right: 8px;
+position: absolute;
+left: 0;
 }
-.info-table {
+/* Sidebar tables become stacked lists */
+.sidebar .skills-table, .sidebar .info-table {
 width: 100%;
 border-collapse: collapse;
-margin-bottom: 15px;
+margin-bottom: 10px;
 }
-.info-table th {
-background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-color: white;
-padding: 10px;
-text-align: left;
+.sidebar .skills-table thead, .sidebar .info-table thead {
+display: none;
+}
+.sidebar .skills-table tr, .sidebar .info-table tr {
+display: block;
+padding: 7px 0;
+border-bottom: 1px solid #dde5e5;
+}
+.sidebar .skills-table td, .sidebar .info-table td {
+display: block;
+padding: 0;
+border-bottom: none;
+font-size: 9pt;
+line-height: 1.4;
+}
+.sidebar .skill-category {
 font-weight: bold;
-font-size: 11pt;
+color: #134e4a;
+width: auto;
+margin-bottom: 2px;
+font-size: 9.5pt;
 }
-.info-table td {
-padding: 10px;
-border-bottom: 1px solid #e5e7eb;
-}
-.info-table tr:nth-child(even) {
-background-color: #f8fafc;
-}
+.sidebar .info-table td:nth-child(1) { font-weight: 600; color: #1f2937; }
+.sidebar .info-table td:nth-child(2), .sidebar .info-table td:nth-child(3), .sidebar .info-table td:nth-child(4) { color: #4b5563; }
 .download-btn {
-background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-color: white;
-padding: 12px 24px;
+background: #0f766e;
+color: #ffffff;
+padding: 12px 26px;
 border: none;
-border-radius: 6px;
+border-radius: 4px;
 cursor: pointer;
-font-size: 11pt;
+font-size: 10.5pt;
 margin: 20px auto;
 display: block;
 font-weight: bold;
-box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-transition: all 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+transition: all 0.25s ease;
+width: fit-content;
+text-decoration: none;
+text-align: center;
 }
 .download-btn:hover {
-transform: translateY(-2px);
-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+background: #115e59;
+transform: translateY(-1px);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.summary-box {
-background: linear-gradient(135deg, #eff6ff, #dbeafe);
-border-left: 4px solid #3b82f6;
-padding: 20px;
-border-radius: 6px;
-margin-bottom: 20px;
+.more-details { margin: 8px 0 16px; }
+.more-details > summary { cursor: pointer; color: #0f766e; font-weight: 600; padding: 10px 0; min-height: 20px; font-size: 9.5pt; }
+.more-details > summary:hover { text-decoration: underline; }
+.more-details[open] > summary { margin-bottom: 6px; }
+@media screen and (max-width: 860px) {
+.layout { display: flex; flex-direction: column; }
+.sidebar { order: 2; border-right: none; border-top: 1px solid #d9e2e2; }
+.main-col { order: 1; }
 }
-@media (max-width: 768px) {
-.contact-info { gap: 10px; }
-.content { padding: 10px; }
+@media screen and (max-width: 600px) {
+.header { padding: 24px 20px; }
+.main-col { padding: 20px 18px; }
+.sidebar { padding: 20px 18px 26px; }
+.name { font-size: 21pt; }
 .skills-table, .experience-table, .info-table { font-size: 10pt; }
 }
-/* Print/PDF layout fix: let large sections flow across pages instead of
-   jumping whole to the next page (which was leaving big blank gaps).
-   Keep only small units (a job header, a single bullet, a table row)
-   from splitting awkwardly. Placed last so it wins the cascade at print time. */
+/* Print/PDF: keep the two-column A4 layout. Placed last so it wins the cascade. */
 @media print {
-.content { padding: 15px 30px; box-shadow: none; }
-.header { padding: 18px 30px; }
-.section { break-inside: auto; margin-bottom: 14px; }
-.section-title { break-after: avoid; margin-bottom: 8px; padding-bottom: 3px; }
-.summary-box { padding: 14px; margin-bottom: 14px; }
-.experience-table { break-inside: avoid; break-after: avoid; margin-bottom: 4px; }
-.achievements { margin-top: 4px; margin-bottom: 10px; }
-.achievement { break-inside: avoid; margin-bottom: 4px; }
-.skills-table tr, .info-table tr { break-inside: avoid; }
-}
-
-.download-btn { width: fit-content; text-decoration: none; text-align: center; }
-.achievement { text-align: left; }
-@media (max-width: 600px) {
- .header { padding: 24px 16px; }
- .content { padding: 20px 16px; }
- .experience-table, .experience-table tbody, .experience-table tr, .experience-table td { display: block; width: auto; }
- .experience-table td { border: 0; padding: 3px 12px; }
- .experience-table tr { padding: 8px 0; }
- .skill-category { width: 32%; }
- .skills-table td, .skills-table th, .info-table td, .info-table th { padding: 8px 6px; overflow-wrap: anywhere; }
- .name { font-size: 23pt; }
-}
-@media print {
- @page { size: A4; margin: 12mm; }
- body { max-width: none; font-family: Arial, sans-serif; font-size: 9pt; line-height: 1.28; background: white; }
- .content { padding: 12px 0; }
- .header { padding: 16px; }
- .name { font-size: 22pt; }
- .title { margin-bottom: 10px; }
- .contact-info { font-size: 8pt; }
- .section-title { font-size: 12pt; }
- .summary-box { padding: 12px; }
- .skills-table td, .skills-table th, .info-table td, .info-table th { padding: 6px 8px; font-size: 9pt; }
- .experience-table td { padding: 6px; font-size: 9pt; }
- .header, .skills-table th, .info-table th { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
-}
-
-.info-table { table-layout: fixed; }
-.info-table th:first-child { width: 52%; }
-.info-table th:last-child { width: 12%; }
-@media print { .info-table th:first-child { width: 52%; } .info-table th:last-child { width: 12%; } }
-
-@media screen and (max-width: 600px) {
- .education-table, .education-table tbody, .education-table tr, .education-table td { display: block; width: auto; }
- .education-table thead { display: none; }
- .education-table td::before { content: attr(data-label); display: block; color: #1e3a8a; font-weight: bold; margin-bottom: 3px; }
- .education-table td { padding: 8px 10px; }
+@page { size: A4; margin: 10mm; }
+body { max-width: none; font-family: Arial, sans-serif; font-size: 8.5pt; line-height: 1.3; background: #ffffff; }
+.header { padding: 14px 18px; }
+.header, .header * { color: #ffffff !important; }
+.header .title { color: #99f6e4 !important; }
+.name { font-size: 19pt; }
+.title { font-size: 11pt; }
+.layout { grid-template-columns: 58mm 1fr; }
+.sidebar { padding: 12px 10px 16px; }
+.main-col { padding: 12px 14px 16px; }
+.section { break-inside: auto; margin-bottom: 12px; }
+.section-title { break-after: avoid; font-size: 10pt; margin-bottom: 7px; padding-bottom: 3px; }
+.sidebar .section-title { font-size: 8.5pt; }
+.summary-box { padding: 10px 12px; }
+.experience-table { break-inside: avoid; break-after: avoid; margin-bottom: 3px; }
+.achievements { margin-top: 3px; margin-bottom: 8px; }
+.achievement { break-inside: avoid; margin-bottom: 3px; }
+.more-details > summary { display: none; }
+.more-details { margin: 0; }
+.job-title-cell { font-size: 9.5pt; }
+.duration-cell, .location-cell { font-size: 8pt; }
+.sidebar .skills-table td, .sidebar .info-table td { font-size: 8pt; }
+.sidebar .skill-category { font-size: 8.5pt; }
+.contact-info { font-size: 8pt; gap: 5px; }
+.sidebar .skills-table tr, .sidebar .info-table tr { break-inside: avoid; }
 }
 </style>
 <meta content="Juyoung Moon, Senior Engineering Manager in Berlin. Engineering leadership, cloud platforms, quality engineering, and test automation." name="description"/><meta content="website" property="og:type"/><meta content="Juyoung Moon - Senior Engineering Manager" property="og:title"/><meta content="Juyoung Moon, Senior Engineering Manager in Berlin. Engineering leadership, cloud platforms, quality engineering, and test automation." property="og:description"/><meta content="en_GB" property="og:locale"/><meta content="summary" name="twitter:card"/><link href="favicon.svg" rel="icon" type="image/svg+xml"/><meta content="https://reinamoon.github.io/simpel_resume/index.html" property="og:url"/></head>
-<body>
-<a class="download-btn no-print" download="Juyoung-Moon-Resume.pdf" href="Juyoung-Moon-Resume.pdf">Download PDF (full resume)</a>
+<body><a class="download-btn no-print" download="Juyoung-Moon-Resume.pdf" href="Juyoung-Moon-Resume.pdf">Download PDF (full resume)</a>
 <div class="header">
 <div class="name">Juyoung Moon</div>
 <div class="title">Senior Engineering Manager</div>
+</div>
+<div class="layout">
+<aside class="sidebar">
+<div class="section side-section">
+<div class="section-title">CONTACT</div>
 <div class="contact-info">
 <div class="contact-item">
 <span>moonjuyoung@gmail.com</span>
@@ -298,11 +300,151 @@ margin-bottom: 20px;
 </div>
 </div>
 </div>
-<div class="content">
+<div class="section">
+<div class="section-title">CORE COMPETENCIES</div>
+<table class="skills-table">
+<thead>
+<tr>
+<th>Category</th>
+<th>Technologies &amp; Skills</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="skill-category">Leadership &amp; Methodologies</td>
+<td>People Leadership, OKR, Delivery Management, Agile, Scrum Master, Cross-functional Collaboration, People Management, KPI/OKR Definition, Performance Reviews, 1:1 Coaching, Organizational Change, Career Growth Strategy</td>
+</tr>
+<tr>
+<td class="skill-category">Cloud Platforms &amp; DevOps</td>
+<td>AWS, Azure, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitLab CI, GitHub Actions</td>
+</tr>
+<tr>
+<td class="skill-category">Programming Languages</td>
+<td>Python, Go, Java, Kotlin, C/C++, C#, JavaScript, Shell Scripting, etc</td>
+</tr>
+<tr>
+<td class="skill-category">Data Stores &amp; Pipelines</td>
+<td>PostgreSQL, MySQL, Redis, MongoDB, DynamoDB, Elasticsearch, Apache Kafka, dbt, Airflow, BigQuery, Looker, Power BI, OpenSearch, Y42, Sanity.io, Medallion Architecture</td>
+</tr>
+<tr>
+<td class="skill-category">AI &amp; Automation</td>
+<td>Agentic AI Workflow Design, LLM-based Process Automation, Generative AI Applications, Data-Driven Decision Support, Claude, Cursor, Obsidian, Hermes, Hindsight, Langdock, AI harnesses, Skills &amp; Agents, Local LLM Setup</td>
+</tr>
+<tr>
+<td class="skill-category">Monitoring &amp; Observability</td>
+<td>Prometheus, Grafana, ELK Stack (Elasticsearch), Loki, OpenTelemetry, Flower</td>
+</tr>
+<tr>
+<td class="skill-category">Test Automation</td>
+<td>PyTest, Selenium, Cypress, TestCafe, JMeter, Cucumber, Playwright, QANG Framework</td>
+</tr>
+<tr>
+<td class="skill-category">Compliance &amp; Security</td>
+<td>ISO 27001, GDPR, CVE, Security Testing, Risk Assessment, Test Data Governance, Shift-Left Testing</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">EDUCATION</div>
+<table class="info-table education-table">
+<thead>
+<tr>
+<th>Degree</th>
+<th>Institution</th>
+<th>Duration</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-label="Degree">Bachelor of Engineering in Computer Engineering</td>
+<td data-label="Institution">Tongmyong University</td>
+<td data-label="Duration">Mar 2005 - Feb 2010</td>
+<td data-label="Location">Busan, South Korea</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div class="section">
+<div class="section-title">CERTIFICATIONS</div>
+<table class="info-table">
+<thead>
+<tr>
+<th>Certification</th>
+<th>Issuing Organization</th>
+<th>Year</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Six Sigma Black Belt</td>
+<td>Korea License Approval Development Institute</td>
+<td>2024</td>
+</tr>
+<tr>
+<td>ISTQB Certified Tester Foundation Level (CTFL) 4.0</td>
+<td>ISTQB</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>AWS Certified Cloud Practitioner</td>
+<td>AWS</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>AWS Generative AI Applications</td>
+<td>AWS</td>
+<td>2025</td>
+</tr>
+<tr>
+<td>AWS Cloud Technology Consultant</td>
+<td>AWS</td>
+<td>2024</td>
+</tr><tr>
+<td>Google Cybersecurity Professional Certificate</td>
+<td>Google</td>
+<td>2024</td>
+</tr><tr>
+<td>IBM AI Product Manager Certificate</td>
+<td>IBM</td>
+<td>2025</td>
+</tr><tr>
+<td>Generative AI for Project Managers</td>
+<td>IBM</td>
+<td>2025</td>
+</tr><tr>
+<td>Generative AI for Program Managers</td>
+<td>IBM</td>
+<td>2025</td>
+</tr><tr>
+<td>DevOps, Cloud, and Agile Foundations Specialization</td>
+<td>IBM</td>
+<td>2025</td>
+</tr><tr>
+<td>Strategic Leadership and Management Specialization<br/>Business Analytics Specialization<br/>Business Value and Project Management Specialization<br/>Global Challenges in Business Specialization</td>
+<td>University of Illinois Urbana-Champaign</td>
+<td>2025</td>
+</tr><tr>
+<td>Coaching Skills for Managers Specialization</td>
+<td>University of California, Davis</td>
+<td>2025</td>
+</tr><tr>
+<td>Engineering Project Management Specialization</td>
+<td>Rice University</td>
+<td>2025</td>
+</tr></tbody></table>
+</div>
+
+</aside>
+<main class="main-col">
 <div class="section">
 <div class="section-title">PROFESSIONAL SUMMARY</div>
 <div class="summary-box">Engineering Manager with 19+ years across software engineering, cloud platforms, and quality engineering, including startup founding. Led three teams at IONOS, combining reliable delivery with engineer growth. Built an automation framework that cut test development time by 60%; led a 15-member team at Samsung that cut manual validation cycles by 90%.</div>
 </div>
+
 <div class="section">
 <div class="section-title">PROFESSIONAL EXPERIENCE</div>
 <table class="experience-table">
@@ -399,147 +541,15 @@ margin-bottom: 20px;
 <div class="achievement">Architected enterprise-wide test framework supporting OS installation, monitoring, and automated logging for 1500+ test machines</div>
 <div class="achievement">Designed scenario-based validation tests for 3D NAND flash memory assessing reliability under thermal stress and endurance conditions</div><div class="achievement">Developed hardware unit test framework using C, FPGA, oscilloscopes, and logic analyzers for early controller validation</div><div class="achievement">Defined weekly execution KPIs across validation labs, including hardware fault detection rate and automated execution coverage.</div><div class="achievement">Coordinated cross-site test execution with US and Vietnam teams to maintain milestone alignment.</div><div class="achievement">Introduced dashboard-based KPI tracking to align international QA efforts, including pass rate trends, hardware fault detection metrics, and execution coverage across geographies.</div></div>
 </div>
-<div class="section">
-<div class="section-title">CORE COMPETENCIES</div>
-<table class="skills-table">
-<thead>
-<tr>
-<th>Category</th>
-<th>Technologies &amp; Skills</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="skill-category">Leadership &amp; Methodologies</td>
-<td>People Leadership, OKR, Delivery Management, Agile, Scrum Master, Cross-functional Collaboration, People Management, KPI/OKR Definition, Performance Reviews, 1:1 Coaching, Organizational Change, Career Growth Strategy</td>
-</tr>
-<tr>
-<td class="skill-category">Cloud Platforms &amp; DevOps</td>
-<td>AWS, Azure, Kubernetes, Docker, Terraform, Ansible, Jenkins, GitLab CI, GitHub Actions</td>
-</tr>
-<tr>
-<td class="skill-category">Programming Languages</td>
-<td>Python, Go, Java, Kotlin, C/C++, C#, JavaScript, Shell Scripting, etc</td>
-</tr>
-<tr>
-<td class="skill-category">Data Stores &amp; Pipelines</td>
-<td>PostgreSQL, MySQL, Redis, MongoDB, DynamoDB, Elasticsearch, Apache Kafka, dbt, Airflow, BigQuery, Looker, Power BI, OpenSearch, Y42, Sanity.io, Medallion Architecture</td>
-</tr>
-<tr>
-<td class="skill-category">AI &amp; Automation</td>
-<td>Agentic AI Workflow Design, LLM-based Process Automation, Generative AI Applications, Data-Driven Decision Support, Claude, Cursor, Obsidian, Hermes, Hindsight, Langdock, AI harnesses, Skills &amp; Agents, Local LLM Setup</td>
-</tr>
-<tr>
-<td class="skill-category">Monitoring &amp; Observability</td>
-<td>Prometheus, Grafana, ELK Stack (Elasticsearch), Loki, OpenTelemetry, Flower</td>
-</tr>
-<tr>
-<td class="skill-category">Test Automation</td>
-<td>PyTest, Selenium, Cypress, TestCafe, JMeter, Cucumber, Playwright, QANG Framework</td>
-</tr>
-<tr>
-<td class="skill-category">Compliance &amp; Security</td>
-<td>ISO 27001, GDPR, CVE, Security Testing, Risk Assessment, Test Data Governance, Shift-Left Testing</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section">
-<div class="section-title">EDUCATION</div>
-<table class="info-table education-table">
-<thead>
-<tr>
-<th>Degree</th>
-<th>Institution</th>
-<th>Duration</th>
-<th>Location</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td data-label="Degree">Bachelor of Engineering in Computer Engineering</td>
-<td data-label="Institution">Tongmyong University</td>
-<td data-label="Duration">Mar 2005 - Feb 2010</td>
-<td data-label="Location">Busan, South Korea</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="section">
-<div class="section-title">CERTIFICATIONS</div>
-<table class="info-table">
-<thead>
-<tr>
-<th>Certification</th>
-<th>Issuing Organization</th>
-<th>Year</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Six Sigma Black Belt</td>
-<td>Korea License Approval Development Institute</td>
-<td>2024</td>
-</tr>
-<tr>
-<td>ISTQB Certified Tester Foundation Level (CTFL) 4.0</td>
-<td>ISTQB</td>
-<td>2025</td>
-</tr>
-<tr>
-<td>AWS Certified Cloud Practitioner</td>
-<td>AWS</td>
-<td>2025</td>
-</tr>
-<tr>
-<td>AWS Generative AI Applications</td>
-<td>AWS</td>
-<td>2025</td>
-</tr>
-<tr>
-<td>AWS Cloud Technology Consultant</td>
-<td>AWS</td>
-<td>2024</td>
-</tr><tr>
-<td>Google Cybersecurity Professional Certificate</td>
-<td>Google</td>
-<td>2024</td>
-</tr><tr>
-<td>IBM AI Product Manager Certificate</td>
-<td>IBM</td>
-<td>2025</td>
-</tr><tr>
-<td>Generative AI for Project Managers</td>
-<td>IBM</td>
-<td>2025</td>
-</tr><tr>
-<td>Generative AI for Program Managers</td>
-<td>IBM</td>
-<td>2025</td>
-</tr><tr>
-<td>DevOps, Cloud, and Agile Foundations Specialization</td>
-<td>IBM</td>
-<td>2025</td>
-</tr><tr>
-<td>Strategic Leadership and Management Specialization<br/>Business Analytics Specialization<br/>Business Value and Project Management Specialization<br/>Global Challenges in Business Specialization</td>
-<td>University of Illinois Urbana-Champaign</td>
-<td>2025</td>
-</tr><tr>
-<td>Coaching Skills for Managers Specialization</td>
-<td>University of California, Davis</td>
-<td>2025</td>
-</tr><tr>
-<td>Engineering Project Management Specialization</td>
-<td>Rice University</td>
-<td>2025</td>
-</tr></tbody></table>
-</div>
+
 <div class="section">
 <div class="section-title">ADDITIONAL EXPERIENCE</div>
 <div class="achievement">Startup Co-Founder: Photo editing and management software for photo studios; subscription service for pet-related products.</div>
 <div class="achievement">Owned product roadmap and engineering KPIs including time-to-market, customer-reported defects, and release stability; implemented early agile rituals and drove execution of MVP within 3-month window.</div>
 <div class="achievement">Software Engineering Intern: Completed internships in Manila, Philippines developing internal tools and automation projects using ASP.NET</div>
 </div>
+
+</main>
 </div>
 </body>
 </html>
