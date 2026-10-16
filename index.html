@@ -368,6 +368,12 @@ margin-bottom: 20px;
 .layout-sidebar .contact-info a { color: var(--accent-dark); text-decoration: none; word-break: break-word; }
 .layout-sidebar.theme-charcoal .contact-info a { color: #d1d5db; text-decoration: underline; }
 .layout-sidebar.theme-charcoal .contact-info a:hover { color: #ffffff; }
+.contact-item .ci { flex: none; font-family: "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif; text-decoration: none; }
+.contact-ul a, .layout-sidebar .contact-ul a, .layout-sidebar.theme-charcoal .contact-ul a { text-decoration: underline; text-underline-offset: 2px; }
+.contact-break { flex-basis: 100%; height: 0; }
+.layout-sidebar .contact-break { display: none; }
+.layout-sidebar .contact-break + .contact-item { margin-top: 6px; padding-top: 10px; border-top: 1px solid var(--accent-border); width: 100%; }
+.layout-sidebar.theme-charcoal .contact-break + .contact-item { border-top-color: #666666; }
 /* ----- Sidebar layout: timeline experience ----- */
 .layout-sidebar .company-group { position: relative; padding-left: 26px; margin-bottom: 16px; }
 .layout-sidebar .company-group::before {
@@ -518,22 +524,23 @@ h.classList.add('layout-'+l);h.classList.add('theme-'+t);
 <div class="title">Senior Engineering Manager</div>
 <div class="contact-info">
 <div class="contact-item">
-<span>moonjuyoung@gmail.com</span>
+<span class="ci" aria-hidden="true">✉️</span><span>moonjuyoung@gmail.com</span>
 </div>
 <div class="contact-item">
-<a href="https://www.linkedin.com/in/reinamoon" rel="noopener noreferrer" target="_blank">linkedin.com/in/reinamoon</a>
+<span class="ci" aria-hidden="true">💼</span><a href="https://www.linkedin.com/in/reinamoon" rel="noopener noreferrer" target="_blank">linkedin.com/in/reinamoon</a>
 </div>
 <div class="contact-item">
-<span>+49 176 4560 2223</span>
+<span class="ci" aria-hidden="true">📞</span><span>+49 176 4560 2223</span>
 </div>
 <div class="contact-item">
-<span>Berlin, Germany (10117)</span>
+<span class="ci" aria-hidden="true">📍</span><span>Berlin, Germany (10117)</span>
 </div>
-<div class="contact-item">
-<a href="https://github.com/ReinaMoon/simpel_resume" rel="noopener noreferrer" target="_blank">Interactive Online Resume</a>
+<div class="contact-break"></div>
+<div class="contact-item contact-ul">
+<span class="ci" aria-hidden="true">💡</span><a href="https://github.com/ReinaMoon/simpel_resume" rel="noopener noreferrer" target="_blank">Interactive Online Resume</a>
 </div>
-<div class="contact-item">
-<a href="https://github.com/ReinaMoon/apps-release" rel="noopener noreferrer" target="_blank">Android app release site</a>
+<div class="contact-item contact-ul">
+<span class="ci" aria-hidden="true">🤖</span><a href="https://github.com/ReinaMoon/apps-release" rel="noopener noreferrer" target="_blank">Android app release site</a>
 </div>
 </div>
 </div>
