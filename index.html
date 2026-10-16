@@ -10,7 +10,14 @@
 @media print {
 body { margin: 0; font-size: 11pt; }
 .no-print { display: none!important; }
-.header { background: linear-gradient(135deg, #1e3a8a, #3b82f6) !important; }
+.header {
+ background-color: #1e3a8a !important;
+ background-image: none !important;
+ -webkit-print-color-adjust: exact;
+ print-color-adjust: exact;
+}
+.header, .header * { color: #fff !important; }
+.header .title { opacity: 1; }
 }
 body {
 font-family: 'IBM Plex Sans', 'Helvetica Neue', Arial, sans-serif;
@@ -23,7 +30,8 @@ padding: 0;
 background: #f8fafc;
 }
 .header {
-background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+background-color: #1e3a8a;
+background-image: linear-gradient(135deg, #1e3a8a, #3b82f6);
 color: white;
 padding: 30px;
 text-align: center;
