@@ -547,6 +547,25 @@ margin-bottom: 20px;
  .layout-sidebar.theme-charcoal .main-col { padding-left: 14px; }
  .layout-sidebar.theme-charcoal .side-col { padding-right: 6px; }
 }
+
+/* ----- Nested company / role hierarchy (one company block, promoted roles inside) ----- */
+.company-header { border-bottom: 2px solid var(--accent-border, #b6ccf0); padding-bottom: 8px; }
+.company-header .company-name { font-size: 12.5pt; }
+.company-header .company-name::before { content: none !important; }
+.nested-roles { margin-top: 6px; }
+.nested-role { border-left: 2px solid var(--accent-border, #b6ccf0); padding: 2px 0 6px 14px; margin: 10px 0 0 2px; }
+.nested-role:last-child { padding-bottom: 0; }
+.nested-role .job-header { border-bottom: 0; padding-bottom: 2px; margin-bottom: 4px; }
+.nested-role .job-title { font-size: 11.5pt; }
+/* Sidebar timeline: one node per company, roles nested beneath it */
+.layout-sidebar .nested-role { border-left: 0; padding: 2px 0 2px 10px; margin: 8px 0 0; }
+.layout-sidebar .nested-role::before { display: none; }
+.layout-sidebar .company-job { padding-bottom: 0; }
+@media print {
+ .nested-role { break-inside: auto; }
+ .nested-role .job-header { break-inside: avoid; break-after: avoid; }
+ .nested-role, .company-header { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+}
 </style>
 <script>
 (function(){try{
@@ -608,7 +627,7 @@ h.classList.add('layout-'+l);h.classList.add('theme-'+t);
 <main class="main-col">
 <div class="section section-summary">
 <div class="section-title">PROFESSIONAL SUMMARY</div>
-<div class="summary-box">Engineering leader with 19+ years spanning cloud, platform, data, and quality engineering — from founding a startup to leading enterprise teams in Korea and Germany. Grew at IONOS from QA Engineer (2018) to Senior Engineering Manager (2022) through internal promotion, leading three platform engineering teams and standardizing QA, delivery, and engineering practices company-wide, including an automation framework that cut test development time by 60%. Currently Global Data Engineering Manager at Samy Alliance, leading a medallion-architecture data platform (dbt, Airflow, BigQuery, Looker) where pipeline optimization improved execution speed by 10% and cut BigQuery infrastructure costs by 30%, while driving agentic AI adoption across analysis and reporting workflows. Started out leading at scale at Samsung, directing a 15-member team that reduced manual validation cycles by 90%. Permanent resident of Germany with a track record of building high-performing, internationally distributed teams.</div>
+<div class="summary-box">Engineering leader with 19+ years spanning cloud, platform, data, and quality engineering — from founding a startup to leading enterprise teams in Korea and Germany. At IONOS SE, led three engineering teams across IaaS, PaaS, and DBaaS, standardizing QA, delivery, and operational readiness company-wide, including an automation framework that cut test development time by 60%. Currently Global Data Engineering Manager at Samy Alliance, leading a medallion-architecture data platform (dbt, Airflow, BigQuery, Looker) where pipeline optimization improved execution speed by 10% and cut BigQuery infrastructure costs by 30%, while driving agentic AI adoption across analysis and reporting workflows. Started out leading at scale at Samsung, directing a 15-member team that reduced manual validation cycles by 90%. Permanent resident of Germany with a track record of building high-performing, internationally distributed teams.</div>
 </div>
 
 <div class="section section-experience">
@@ -632,31 +651,34 @@ h.classList.add('layout-'+l);h.classList.add('theme-'+t);
 </div>
 </div>
 <div class="company-group">
-<div class="job">
+<div class="job company-job">
+<div class="job-header company-header">
+<span class="company-name">IONOS SE</span>
+<span class="job-meta"><span class="duration-badge">Aug 2018 - Jan 2026 &middot; 7 yrs 6 mos</span><span class="location-badge">Berlin, Germany</span></span>
+</div>
+<div class="nested-roles">
+<div class="job nested-role">
 <div class="job-header">
 <span class="job-title">Senior Engineering Manager</span>
-<span class="company-name">IONOS SE</span>
-<span class="job-meta"><span class="promotion-badge">Promoted from QA Engineer</span><span class="duration-badge">Jun 2022 - Jan 2026</span><span class="location-badge">Berlin, Germany</span></span>
+<span class="job-meta"><span class="promotion-badge">Promoted</span><span class="duration-badge">Jun 2022 - Jan 2026</span></span>
 </div>
 <div class="achievements">
-
-
-
-
-
-<div class="achievement">Earned internal promotion from QA Engineer (joined 2018) to Senior Engineering Manager (2022), progressing from building test automation to leading three engineering teams with full delivery ownership</div><div class="achievement">Led three engineering teams owning internal platforms and services supporting IaaS, PaaS, and DBaaS products, with full responsibility for delivery, runtime stability, and operational readiness</div><div class="achievement">Designed and implemented QANG internal Python test automation framework adopted by several teams, reducing test development time by 60% and standardizing testing practices company-wide</div><div class="achievement">Built high-performing engineering team through strategic hiring, onboarding, and mentorship programs</div><div class="achievement">Conducted structured 1:1s and career development sessions; implemented performance review process with SMART goals to support growth and succession planning.</div><div class="achievement">Defined quarterly OKRs and individual KPIs for each team; led weekly alignment meetings and quarterly reviews to drive accountability, identify blockers, and promote outcome-oriented execution across teams.</div><div class="achievement">Integrated Apache Kafka into internal service pipelines to enable event-driven processing, real-time monitoring, and faster incident detection</div><div class="achievement">Collaborated with product and infrastructure leadership to define quality KPIs such as mean time to detection (MTTD), mean time to resolution (MTTR), and automated test coverage thresholds.</div><div class="achievement">Established QA metrics dashboard using Grafana and Python scripts, enabling real-time KPI tracking for defect trends, test coverage, and release readiness across multiple teams.</div><div class="achievement">Implemented a reusable performance testing framework to detect system bottlenecks, measuring key metrics like response time, throughput, and I/O latency to improve overall performance by 10%.</div><div class="achievement">Collaborated with cybersecurity teams to ensure ISO 27001 compliance for cloud infrastructure testing processes, incorporating security test automation, CVE scanning, and continuous audit support for internal controls.</div><div class="achievement">Defined roadmap, planning, and priorities for IaaS and PaaS products owned by my teams, incl. snapshot backup, autoscaling, S3, and load balancers</div><div class="achievement">Worked cross-functionally with product teams on product development, using quality and performance metrics to prioritize improvements; stakeholder point of contact</div></div>
+<div class="achievement">Led three engineering teams owning internal platforms and services supporting IaaS, PaaS, and DBaaS products, with full responsibility for delivery, runtime stability, and operational readiness</div><div class="achievement">Designed and implemented QANG internal Python test automation framework adopted by several teams, reducing test development time by 60% and standardizing testing practices company-wide</div><div class="achievement">Built high-performing engineering team through strategic hiring, onboarding, and mentorship programs</div><div class="achievement">Conducted structured 1:1s and career development sessions; implemented performance review process with SMART goals to support growth and succession planning.</div><div class="achievement">Defined quarterly OKRs and individual KPIs for each team; led weekly alignment meetings and quarterly reviews to drive accountability, identify blockers, and promote outcome-oriented execution across teams.</div><div class="achievement">Integrated Apache Kafka into internal service pipelines to enable event-driven processing, real-time monitoring, and faster incident detection</div><div class="achievement">Collaborated with product and infrastructure leadership to define quality KPIs such as mean time to detection (MTTD), mean time to resolution (MTTR), and automated test coverage thresholds.</div><div class="achievement">Established QA metrics dashboard using Grafana and Python scripts, enabling real-time KPI tracking for defect trends, test coverage, and release readiness across multiple teams.</div><div class="achievement">Implemented a reusable performance testing framework to detect system bottlenecks, measuring key metrics like response time, throughput, and I/O latency to improve overall performance by 10%.</div><div class="achievement">Collaborated with cybersecurity teams to ensure ISO 27001 compliance for cloud infrastructure testing processes, incorporating security test automation, CVE scanning, and continuous audit support for internal controls.</div><div class="achievement">Defined roadmap, planning, and priorities for IaaS and PaaS products owned by my teams, incl. snapshot backup, autoscaling, S3, and load balancers</div><div class="achievement">Worked cross-functionally with product teams on product development, using quality and performance metrics to prioritize improvements; stakeholder point of contact</div>
 </div>
-<div class="job">
+</div>
+<div class="job nested-role">
 <div class="job-header">
 <span class="job-title">QA Engineer</span>
-<span class="company-name">IONOS SE</span>
-<span class="job-meta"><span class="duration-badge">Aug 2018 - May 2022</span><span class="location-badge">Berlin, Germany</span></span>
+<span class="job-meta"><span class="duration-badge">Aug 2018 - May 2022</span></span>
 </div>
 <div class="achievements">
 <div class="achievement">Led comprehensive testing strategy for cloud infrastructure products including VM, S3, Kubernetes, Load Balancer, and Database services</div>
 <div class="achievement">Developed modular Python and PyTest test framework increasing test reusability by 70% and reducing CI/CD execution time by 45%</div>
 <div class="achievement">Managed complex test environments and on-premises hardware provisioning for staging environments supporting 500+ daily test executions</div>
-<div class="achievement">Designed automated test suites using JMeter, TestCafe, Jenkins, and PostgreSQL achieving 85% test coverage</div><div class="achievement">Mentored 5+ junior QA engineers through code reviews and best practices training.</div><div class="achievement">Contributed to defining and monitoring KPIs such as flaky test rate, post-release defect rate, and CI reliability, laying the foundation for later leadership responsibilities.</div></div>
+<div class="achievement">Designed automated test suites using JMeter, TestCafe, Jenkins, and PostgreSQL achieving 85% test coverage</div><div class="achievement">Mentored 5+ junior QA engineers through code reviews and best practices training.</div><div class="achievement">Contributed to defining and monitoring KPIs such as flaky test rate, post-release defect rate, and CI reliability, laying the foundation for later leadership responsibilities.</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="company-group">
