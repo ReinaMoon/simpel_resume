@@ -110,8 +110,10 @@ a:focus-visible {
 .title {
   margin: 8px 0 18px;
   color: var(--accent);
-  font-size: 19px;
-  font-weight: 400;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
 }
 
 .contact-info {
@@ -130,8 +132,6 @@ a:focus-visible {
   height: 0;
 }
 
-.phone-contact { display: none; }
-
 .content { padding: 0 58px 44px; }
 
 .section { margin: 0 0 30px; }
@@ -142,7 +142,7 @@ a:focus-visible {
   padding-bottom: 9px;
   border-bottom: 1px solid var(--line);
   color: var(--accent);
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.4;
   font-weight: 700;
   letter-spacing: 1.6px;
@@ -151,6 +151,7 @@ a:focus-visible {
 
 .summary {
   margin: 0;
+  text-align: justify;
   color: #3d4954;
   font-size: 14px;
   line-height: 1.7;
@@ -230,6 +231,7 @@ a:focus-visible {
 }
 
 .achievements li {
+  text-align: justify;
   margin: 0 0 7px;
   padding-left: 3px;
   color: #3b4650;
@@ -417,17 +419,16 @@ a:focus-visible {
   .content { padding: 0; }
 
   .name { font-size: 27pt; }
-  .title { font-size: 14pt; margin-bottom: 12px; }
+  .title { font-size: 13pt; margin-bottom: 12px; }
 
   .contact-info { font-size: 8pt; }
-  .phone-contact { display: inline; }
 
   .section { margin-bottom: 21px; }
 
   .section-title {
     margin-bottom: 12px;
     padding-bottom: 6px;
-    font-size: 9pt;
+    font-size: 10.5pt;
     break-after: avoid;
   }
 
@@ -538,7 +539,10 @@ a:focus-visible {
          target="_blank" rel="noopener noreferrer">
         linkedin.com/in/reinamoon
       </a>
-      <span class="phone-contact">+49 176 4560 2223</span>
+      <a href="https://github.com/ReinaMoon"
+         target="_blank" rel="noopener noreferrer">
+        github.com/ReinaMoon
+      </a>
       <span>Berlin, Germany (10117)</span>
 
       <div class="contact-break"></div>
@@ -548,7 +552,6 @@ a:focus-visible {
         Interactive Online Resume
       </a>
       <span>Permanent Residency, Germany (No sponsorship required)</span>
-      <span>English (Full Professional) · Korean (Native) · German (A1.2 Elementary)</span>
     </div>
   </header>
 
@@ -556,7 +559,7 @@ a:focus-visible {
     <section class="section">
       <h2 class="section-title">Professional Summary</h2>
       <p class="summary">
-        Engineering leader with 19+ years spanning cloud, platform, data, and quality engineering, from founding a startup to leading enterprise teams in Korea and Germany. At IONOS SE, led three engineering teams (20+ engineers) across IaaS, PaaS, and DBaaS, standardizing QA, delivery, and operational readiness company-wide, including an automation framework that cut test development time by 60%. Currently Global Data Engineering Manager at Samy Alliance, leading a medallion-architecture data platform (dbt, Airflow, BigQuery, Looker) where pipeline optimization improved execution speed by 10% and cut BigQuery infrastructure costs by 30%, while driving agentic AI adoption across analysis and reporting workflows. Started out leading at scale at Samsung, directing a 15-member team that reduced manual validation cycles by 90%. Permanent resident of Germany with a track record of building high-performing, internationally distributed teams.
+        Engineering leader with 19+ years spanning cloud, platform, data, and quality engineering, from founding a startup to leading enterprise teams in Korea and Germany. At IONOS SE, led three engineering teams across IaaS, PaaS, and DBaaS, standardizing QA, delivery, and operational readiness company-wide, including an automation framework that cut test development time by 60%. Currently Global Data Engineering Manager at Samy Alliance, leading a medallion-architecture data platform (BigQuery, Looker) where pipeline optimization improved execution speed by 10% and cut BigQuery infrastructure costs by 42%, while driving agentic AI adoption across analysis and reporting workflows. Started out leading at scale at Samsung, directing a 15-member team that reduced manual validation cycles by 90%. Permanent resident of Germany with a track record of building high-performing, internationally distributed teams.
       </p>
     </section>
 
@@ -577,11 +580,11 @@ a:focus-visible {
         </div>
 
         <ul class="achievements">
-          <li>Lead a 5-person team spanning Data Engineering and Data Analysis, setting team roadmap, priorities, and delivery standards for a medallion (bronze/silver/gold) data platform built on dbt, Airflow, BigQuery, and Looker, serving analytics, ML, and BI teams for a social media marketing analytics platform</li>
+          <li>Lead a 5-person team spanning Data Engineering and Data Analysis, setting team roadmap, priorities, and delivery standards for a medallion (bronze/silver/gold) data platform built on BigQuery and Looker, serving analytics, ML, and BI teams for a social media marketing analytics platform</li>
           <li>Drive AI adoption within the team, designing and building agentic AI workflows that consume internal data-pipeline outputs to automate analysis, reporting, and decision support</li>
           <li>Establish internal engineering processes and documentation standards for pipeline development, code review, and data quality, bringing rigor from prior QA leadership into a fast-moving analytics environment</li>
           <li>Own team growth through hiring, onboarding, 1:1s, and performance conversations, coaching engineers and analysts toward greater ownership and technical depth</li>
-          <li>Optimized data pipelines end to end, improving execution speed by 10% and reducing BigQuery infrastructure costs by 30% through query, storage, and workflow efficiency gains</li>
+          <li>Optimized data pipelines end to end, improving execution speed by 10% and reducing BigQuery infrastructure costs by 42% through partitioning, clustering, and caching</li>
           <li>Partner with analytics, ML, and data science leadership to translate business requirements into a prioritized data platform roadmap, defining and launching multiple data products from concept to production</li>
           <li>Serve as the single point of contact for cross-functional stakeholders, aligning engineering delivery with business impact and leading transparent, metrics-based progress communication</li>
         </ul>
@@ -606,7 +609,7 @@ a:focus-visible {
 
             <h5 class="achievement-group">People &amp; Organization</h5>
             <ul class="achievements">
-              <li>Led three engineering teams totaling 20+ engineers, owning internal platforms and services supporting IaaS, PaaS, and DBaaS products, with full responsibility for delivery, runtime stability, and operational readiness</li>
+              <li>Led three engineering teams, owning internal platforms and services supporting IaaS, PaaS, and DBaaS products, with full responsibility for delivery, runtime stability, and operational readiness</li>
               <li>Built high-performing engineering team through strategic hiring, onboarding, and mentorship programs</li>
               <li>Conducted structured 1:1s and career development sessions, and implemented a performance review process with SMART goals to support growth and succession planning</li>
               <li>Defined quarterly OKRs and individual KPIs for each team, and led weekly alignment meetings and quarterly reviews to drive accountability, identify blockers, and promote outcome-oriented execution across teams</li>
@@ -1026,3 +1029,4 @@ a:focus-visible {
 </script>
 </body>
 </html>
+
