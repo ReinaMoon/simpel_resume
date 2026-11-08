@@ -1,36 +1,10 @@
 # Resume PDF
 
-The Download PDF button links to a prebuilt PDF matching the color theme and
-body font currently selected in the on-page picker. It does not open the
-visitor's print dialog.
+`Juyoung-Moon-Resume.pdf` is the single prebuilt PDF matching the default appearance (Navy color, Source Sans 3 font). Visitors can also use the on-page Print / Save PDF button after picking any color and font, which prints exactly what they see.
 
-The picker (color: Blue / Charcoal; font: IBM Plex Sans / Inter / Lato /
-Source Sans 3) stores the visitor's choice in `localStorage` and points the
-download button at the matching file:
+The page reads optional `?theme=` (blue, charcoal) and `?font=` (source, plex, inter, lato) URL parameters, which the build uses to render the PDF:
 
-| Color | Font | File |
-| --- | --- | --- |
-| Blue | IBM Plex Sans (default) | `Juyoung-Moon-Resume.pdf` |
-| Charcoal | IBM Plex Sans (default) | `Juyoung-Moon-Resume-original-charcoal.pdf` |
-| Blue | Inter | `Juyoung-Moon-Resume-blue-inter.pdf` |
-| Charcoal | Inter | `Juyoung-Moon-Resume-charcoal-inter.pdf` |
-| Blue | Lato | `Juyoung-Moon-Resume-blue-lato.pdf` |
-| Charcoal | Lato | `Juyoung-Moon-Resume-charcoal-lato.pdf` |
-| Blue | Source Sans 3 | `Juyoung-Moon-Resume-blue-source.pdf` |
-| Charcoal | Source Sans 3 | `Juyoung-Moon-Resume-charcoal-source.pdf` |
+    npm ci
+    CHROME_BIN=/path/to/chrome npm run build:pdf
 
-All variants render from the same `index.html` content, so text edits
-propagate to every theme and font. After editing `index.html`, regenerate
-and check all PDFs before committing:
-
-```sh
-npm ci
-CHROME_BIN=/path/to/chrome npm run build:pdf
-```
-
-The default Chrome path is `/usr/bin/google-chrome-stable`. The generator
-expands every achievement and certification section, uses A4 pages, retains
-backgrounds, and omits browser headers and footers. `npm run build:pdf -- blue`
-(or `charcoal`) rebuilds only that theme's PDFs. The build does
-not publish, deploy, or change GitHub Pages settings. The PDFs must be rebuilt
-when the resume changes; they are not updated automatically.
+After editing `index.html`, regenerate the PDF and check it before committing.
