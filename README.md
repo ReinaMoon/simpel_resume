@@ -29,7 +29,7 @@
 
 <div align="center">
   
-  ![Resume Preview GIF](https://github.com/ReinaMoon/simpel_resume/blob/main/preview/preview.png?text=Resume+Preview+GIF)
+  ![Resume Preview](preview/preview.png)
   
   
 </div>
@@ -37,7 +37,7 @@
 <br>
 
 ## ✨ About This Project
-> I believe a resume should be more than just a document; it should be a reflection of one's craftsmanship and attention to detail. That's why I chose to build my own resume using web technologies.
+> I believe a resume should be more than just a document. It should be a reflection of one's craftsmanship and attention to detail. That's why I chose to build my own resume using web technologies.
 > This project demonstrates not only my technical skills in front-end development but also my commitment to creating a high-quality, user-friendly experience.
 
 <br>
