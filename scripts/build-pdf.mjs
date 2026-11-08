@@ -3,14 +3,7 @@ import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const variants = [
-  ['blue', 'plex', 'Juyoung-Moon-Resume.pdf'],
-  ['charcoal', 'plex', 'Juyoung-Moon-Resume-original-charcoal.pdf'],
-  ['blue', 'inter', 'Juyoung-Moon-Resume-blue-inter.pdf'],
-  ['charcoal', 'inter', 'Juyoung-Moon-Resume-charcoal-inter.pdf'],
-  ['blue', 'lato', 'Juyoung-Moon-Resume-blue-lato.pdf'],
-  ['charcoal', 'lato', 'Juyoung-Moon-Resume-charcoal-lato.pdf'],
-  ['blue', 'source', 'Juyoung-Moon-Resume-blue-source.pdf'],
-  ['charcoal', 'source', 'Juyoung-Moon-Resume-charcoal-source.pdf'],
+  ['blue', 'source', 'Juyoung-Moon-Resume.pdf'],
 ];
 const only = process.argv[2]; // optional: theme name to build just one theme's PDFs
 const browser = await puppeteer.launch({
