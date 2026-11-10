@@ -7,9 +7,6 @@
   </p>
   
   <p>
-    <a href="https://github.com/ReinaMoon/ReinaMoon_Resume/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/ReinaMoon/ReinaMoon_Resume?style=for-the-badge" alt="license"/>
-    </a>
     <img src="https://img.shields.io/github/languages/top/ReinaMoon/ReinaMoon_Resume?style=for-the-badge&logo=html5" alt="languages"/>
     <img src="https://img.shields.io/github/repo-size/ReinaMoon/ReinaMoon_Resume?style=for-the-badge" alt="repo size"/>
     <img src="https://img.shields.io/github/last-commit/ReinaMoon/ReinaMoon_Resume?style=for-the-badge&logo=github" alt="last commit"/>
@@ -49,11 +46,6 @@
 *   🔗 **Interactive Elements:** Choose from two color themes and four fonts, then use Print / Save PDF to save the current view as a PDF. Includes clickable email and LinkedIn links.
 
 <br>
-
-## 📜 License
-This project is licensed under the **MIT License**. See the `LICENSE` file for details.
-
-<br>
 <hr>
 <br>
 
@@ -86,9 +78,6 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 *   📄 **인쇄용 스타일 최적화:** 별도의 인쇄용 스타일시트를 적용하여, 이력서를 인쇄하거나 PDF로 저장할 때도 깔끔하고 전문적인 결과물이 나오도록 했습니다.
 *   🔗 **인터랙티브 요소:** 두 가지 컬러 테마와 네 가지 폰트 중 원하는 조합을 고른 다음 Print / Save PDF로 현재 화면을 그대로 PDF로 저장할 수 있습니다. 이메일과 링크드인 링크도 클릭할 수 있습니다.
 
-## 📜 라이선스
-이 프로젝트는 **MIT 라이선스**를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참고해 주세요.
-  
 </details>
 
 ## Copyright
