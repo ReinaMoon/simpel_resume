@@ -7,12 +7,12 @@
   </p>
   
   <p>
-    <a href="https://github.com/ReinaMoon/simpel_resume/blob/main/LICENSE">
-      <img src="https://img.shields.io/github/license/ReinaMoon/simpel_resume?style=for-the-badge" alt="license"/>
+    <a href="https://github.com/ReinaMoon/ReinaMoon_Resume/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/ReinaMoon/ReinaMoon_Resume?style=for-the-badge" alt="license"/>
     </a>
-    <img src="https://img.shields.io/github/languages/top/ReinaMoon/simpel_resume?style=for-the-badge&logo=html5" alt="languages"/>
-    <img src="https://img.shields.io/github/repo-size/ReinaMoon/simpel_resume?style=for-the-badge" alt="repo size"/>
-    <img src="https://img.shields.io/github/last-commit/ReinaMoon/simpel_resume?style=for-the-badge&logo=github" alt="last commit"/>
+    <img src="https://img.shields.io/github/languages/top/ReinaMoon/ReinaMoon_Resume?style=for-the-badge&logo=html5" alt="languages"/>
+    <img src="https://img.shields.io/github/repo-size/ReinaMoon/ReinaMoon_Resume?style=for-the-badge" alt="repo size"/>
+    <img src="https://img.shields.io/github/last-commit/ReinaMoon/ReinaMoon_Resume?style=for-the-badge&logo=github" alt="last commit"/>
   </p>
 
 </div>
@@ -20,7 +20,7 @@
 <br>
 
 <div align="center">
-<a href="https://reinamoon.github.io/simpel_resume/index.html" target="_blank">
+<a href="https://reinamoon.github.io/ReinaMoon_Resume/index.html" target="_blank">
   <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
 </a>
 </div>
@@ -71,7 +71,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 </div>
 
 <div align="center">
-<a href="https://reinamoon.github.io/simpel_resume/index.html" target="_blank">
+<a href="https://reinamoon.github.io/ReinaMoon_Resume/index.html" target="_blank">
   <img src="https://img.shields.io/badge/View_Live_Resume-Click_Here-blue?style=for-the-badge&logo=githubpages" alt="Live Resume Link"/>
 </a>
 </div>
@@ -90,3 +90,7 @@ This project is licensed under the **MIT License**. See the `LICENSE` file for d
 이 프로젝트는 **MIT 라이선스**를 따릅니다. 자세한 내용은 `LICENSE` 파일을 참고해 주세요.
   
 </details>
+
+## Copyright
+
+Copyright (c) 2026 Juyoung Moon. All rights reserved. Do not reuse, copy, modify, or redistribute the content without written permission.
